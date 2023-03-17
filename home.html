@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +19,7 @@
         .notification {
             height: 50px;
             min-width: 100%;
-            background-color: grey;
+            background-color: rgb(228, 228, 228);
             border: 1px solid black;
             border-radius: 8px;
             display: flex;
@@ -26,52 +27,68 @@
             margin-bottom: 5px;
         }
 
-        .notification > i {
+        .notification>i {
             font-size: 32px;
             align-self: center;
         }
-        .notification > .time-stamp {
+
+        .notification>.time-stamp {
             justify-self: flex-end;
             align-self: flex-end;
             margin-right: 3px;
 
         }
-        .notification > .message {
+
+        .notification>.message {
             align-self: center;
         }
 
+        .notification>i {
+            margin-left: 10px;
+        }
+
         .navigation {
-            position: absolute;
+            position:fixed;
             bottom: 0;
             left: 0;
             display: flex;
             justify-content: space-around;
             border-top: 1px black solid;
-            background-color: lightblue;
+            background-color: black;
+            color: white;
             width: 100%;
+        }
 
+        button {
+            border-radius: 19px;
+            padding-left: 3px;
         }
     </style>
 </head>
+
 <body>
     <div class="interface">
-        <div class="header">                     
-            <div class="header-name"><h1><i class="fa-solid fa-house"></i> Home</h1></div>
+        <div class="header">
+            <div class="header-name">
+                <h1><i class="fa-solid fa-house"></i> Home</h1>
+            </div>
         </div>
         <div class="content">
             <div class="notification">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-               <div class="message">Emergency</div>
-               <div class="time-stamp">10:00</div>
+                <div class="message">Emergency</div>
+                <div class="time-stamp">10:00</div>
             </div>
             <div class="notification"></div>
             <div class="notification"></div>
             <div class="notification"></div>
         </div>
         <div class="navigation">
-            <div class="button"><h3><i class="fa-solid fa-gear"></i>Settings</h3></div>
-            <div class="button"><h3><i class="fa-solid fa-rectangle-history"></i></i>History</h3></div>
+            <button class="button">
+                <h3><i class="fa-solid fa-gear"></i>Settings</h3>
+            </button>
         </div>
     </div>
 </body>
+
 </html>
