@@ -22,7 +22,7 @@
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin-bottom: 11px;
 }
 
 .notification>i {
@@ -59,7 +59,15 @@
 
 button {
     border-radius: 19px;
-    padding-left: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+button.sort  {
+    position: fixed !important;
+    bottom: 70px;
+    left: 20px;
+
 }
 
 /* Add this to style.css */
@@ -105,7 +113,7 @@ button {
 
 /* Add border styles for dropdown boxes */
 .setting-item > select {
-    font-size: 1em;
+    font-size: 0.7em;
     margin-left: 20px;
     border: 1px solid #000;
     border-radius: 4px;
@@ -120,5 +128,21 @@ button {
 
 .setting-item {
     margin-bottom: 20px;
+}
+
+.fa-triangle-exclamation {
+    color :#D81B60;
+}
+
+.fa-bus {
+    color :#1E88E5;
+}
+
+.fa-clipboard {
+    color :#004D40;
+}
+
+.fa-book {
+    color :#ED7D31;
 }
 
