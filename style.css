@@ -83,6 +83,9 @@ button {
     color: white; 
 }
 
+.tab.active {
+    background-color: #ccc;
+}
 .tab-content {
     display: none;
 }
@@ -100,9 +103,13 @@ button {
     margin-right: 20px;
 }
 
+/* Add border styles for dropdown boxes */
 .setting-item > select {
-    font-size: 1em; /* Reset the font size of the dropdown to its original value */
+    font-size: 1em;
     margin-left: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 5px;
 }
 
 .setting-item > input[type="checkbox"] {
