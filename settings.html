@@ -7,142 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f8bc699a90.js" crossorigin="anonymous"></script>
     <title>Settings</title>
-    <style>
-        :root {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabContent, tab;
 
-        .interface {
-            max-width: 500px;
-            margin: auto;
-        }
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
 
-        .header {
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px;
-        }
+            tab = document.getElementsByClassName("tab");
+            for (i = 0; i < tab.length; i++) {
+                tab[i].className = tab[i].className.replace(" active", "");
+            }
 
-        .header-name {
-            display: flex;
-            align-items: center;
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
         }
-
-        .header-name h1 {
-            margin-left: 10px;
-        }
-
-        .content {
-            padding: 20px;
-        }
-
-        .tab {
-            display: none;
-        }
-
-        .tab.active {
-            display: block;
-        }
-
-        .tabs {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .tab-button {
-            border: none;
-            background-color: transparent;
-            color: black;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-
-        .tab-button.active {
-            color: blue;
-        }
-    </style>
+    </script>
 </head>
 
 <body>
 <div class="interface">
     <div class="header">
         <div class="header-name">
-            <h1><i class="fa-solid fa-gear"></i> Settings</h1>
+            <h1><i class="fa-solid fa-cog"></i> Settings</h1>
         </div>
     </div>
     <div class="content">
         <div class="tabs">
-            <button class="tab-button active" onclick="showTab(1)">Tab 1</button>
-            <button class="tab-button" onclick="showTab(2)">Tab 2</button>
-            <button class="tab-button" onclick="showTab(3)">Tab 3</button>
-            <button class="tab-button" onclick="showTab(4)">Tab 4</button>
+            <div class="tab" onclick="openTab(event, 'Tab1')">Tab 1</div>
+            <div class="tab" onclick="openTab(event, 'Tab2')">Tab 2</div>
+            <div class="tab" onclick="openTab(event, 'Tab3')">Tab 3</div>
+            <div class="tab" onclick="openTab(event, 'Tab4')">Tab 4</div>
         </div>
-        <div class="tab active" id="tab1">
-            <h2>Tab 1 Content</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus, lectus auctor pulvinar blandit,
-                ex enim pretium felis, vitae placerat risus quam sed nunc. Praesent consequat, odio vel efficitur
-                ultricies, lacus libero tincidunt lacus, non congue velit velit non orci. Vivamus quis tortor ut mi
-                aliquet convallis at sit amet neque. Sed lacinia metus ut elit convallis, vel consequat est
-                scelerisque. In in augue nec elit malesuada gravida ut vel ex.</p>
-        </div>
-        <div class="tab" id="tab2">
-            <h2>Tab 2 Content</h2>
-            <p>Nam tincidunt ullamcorper justo, non egestas nisl suscipit eget. Sed fringilla tortor vel
-                condimentum commodo. Sed tristique venenatis mauris vel imperdiet. Sed commodo sapien id lectus
-                bibendum, eu facilisis nibh iaculis. Nunc elementum erat nec ex pretium, quis maximus arcu
-                dignissim. Ut placerat dolor ac efficitur ullamcorper. Sed vel sem eu leo maximus tincidunt at
-                ac nisi. Sed euismod sagittis velit, nec maximus justo gravida id.</p>
-        </div>
-        <div class="tab" id="tab3">
-            <h2>Tab 3 Content</h2>
-            <p>Maecenas vitae bibendum arcu. In imperdiet nulla eget nibh fermentum, sed lacinia dui dignissim.
-                Suspendisse ut velit non velit aliquet efficitur. Aenean ac purus ut urna blandit faucibus. Nam
-                tristique venenatis est, sit amet iaculis nisi eleifend eget. Nullam ullamcorper sapien ut purus
-                malesuada lobortis. Sed vitae mi vel massa posuere aliquet vel quis augue. Morbi lobortis tellus
-                non leo tincidunt, in dictum nisl sagittis.</p>
-        </div>
-        <div class="tab" id="tab4">
-            <h2>Tab 4 Content</h2>
-            <p>Donec venenatis urna ac nisl ullamcorper, id finibus sapien luctus. Duis sed dolor lorem.
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                Vestibulum fringilla, lectus a fringilla volutpat, nunc lacus efficitur turpis, sit amet laoreet
-                quam ipsum vel sapien. Donec nec nisl vel dolor efficitur pellentesque. Proin non nibh a justo
-                volutpat congue nec sed ante. Morbi eget libero massa. Curabitur vel turpis leo. Aliquam
-                pellentesque, leo ac sagittis blandit, ex turpis elementum augue, non finibus libero enim quis ex.
-                Suspendisse ultrices, elit nec tempor volutpat, ante nisi consequat quam, vel tincidunt sapien nulla
-                vel ex.</p>
-        </div>
+        <div id="Tab1" class="tab-content active">a</div>
+        <div id="Tab2" class="tab-content">a</div>
+        <div id="Tab3" class="tab-content">a</div>
+        <div id="Tab4" class="tab-content">a</div>
+    </div>
+    <div class="navigation">
+        <button class="button">
+            <h3><i class="fa-solid fa-house"></i>Home</h3>
+        </button>
     </div>
 </div>
-<script>
-    function showTab(tabNumber) {
-        // Hide all tabs
-        var tabs = document.getElementsByClassName("tab");
-        for (var i = 0; i < tabs.length; i++) {
-            tabs[i].classList.remove("active");
-        }
-
-        // Show selected tab
-        var selectedTab = document.getElementById("tab" + tabNumber);
-        selectedTab.classList.add("active");
-
-        // Set active tab button
-        var tabButtons = document.getElementsByClassName("tab-button");
-        for (var i = 0; i < tabButtons.length; i++) {
-            tabButtons[i].classList.remove("active");
-        }
-        var selectedTabButton = document.getElementsByClassName("tab-button")[tabNumber - 1];
-        selectedTabButton.classList.add("active");
-    }
-</script>
 </body>
+
 </html>

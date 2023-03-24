@@ -1,0 +1,80 @@
+:root {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.interface {
+    max-width: 500px;
+    margin: auto;
+}
+
+
+.notification {
+    height: 50px;
+    min-width: 100%;
+    background-color: rgb(228, 228, 228);
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.notification>i {
+    font-size: 32px;
+    align-self: center;
+}
+
+.notification>.time-stamp {
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-right: 3px;
+
+}
+
+.notification>.message {
+    align-self: center;
+}
+
+.notification>i {
+    margin-left: 10px;
+}
+
+.navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px black solid;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+button {
+    border-radius: 19px;
+    padding-left: 3px;
+}
+
+/* Add this to style.css */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    cursor: pointer;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+

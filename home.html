@@ -7,107 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/f8bc699a90.js" crossorigin="anonymous"></script>
     <title>Home</title>
-    <style>
-        :root {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-sizing: border-box;
-        }
-        .interface {
-            max-width: 500px;
-            margin:auto;
-        }
-
-
-        .notification {
-            height: 50px;
-            min-width: 100%;
-            background-color: rgb(228, 228, 228);
-            border: 1px solid black;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-        }
-
-        .notification>i {
-            font-size: 32px;
-            align-self: center;
-        }
-
-        .notification>.time-stamp {
-            justify-self: flex-end;
-            align-self: flex-end;
-            margin-right: 3px;
-
-        }
-
-        .notification>.message {
-            align-self: center;
-        }
-
-        .notification>i {
-            margin-left: 10px;
-        }
-
-        .navigation {
-            position:fixed;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            justify-content: space-around;
-            border-top: 1px black solid;
-            background-color: black;
-            color: white;
-            width: 100%;
-        }
-
-        button {
-            border-radius: 19px;
-            padding-left: 3px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="interface">
-        <div class="header">
-            <div class="header-name">
-                <h1><i class="fa-solid fa-house"></i> Home</h1>
-            </div>
-        </div>
-        <div class="content">
-            <div class="notification">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <div class="message">Emergency</div>
-                <div class="time-stamp">10:00</div>
-            </div>
-            <div class="notification">
-                <i class="fa-solid fa-bus"></i>
-                <div class="message">Shuttle Has Arrived</div>
-                <div class="time-stamp">10:00</div>
-            </div>
-            <div class="notification">
-                <i class="fa-solid fa-clipboard"></i>
-                <div class="message">Registration is beginning</div>
-                <div class="time-stamp">10:00</div>
-            </div>
-            <div class="notification">
-                <i class="fa-solid fa-book"></i>
-                <div class="message">Exams is starting in 15 mins</div>
-                <div class="time-stamp">10:00</div>
-            </div>
-
-            <button class="button">
-                <h3><i class="fa-solid fa-sort"></i>Sort by</h3>
-            </button>
-        </div>
-        <div class="navigation">
-            <button class="button">
-                <h3><i class="fa-solid fa-gear"></i>Settings</h3>
-            </button>
+<div class="interface">
+    <div class="header">
+        <div class="header-name">
+            <h1><i class="fa-solid fa-house"></i> Home</h1>
         </div>
     </div>
+    <div class="content">
+        <div class="notification">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <div class="message">Emergency</div>
+            <div class="time-stamp">10:00</div>
+        </div>
+        <div class="notification">
+            <i class="fa-solid fa-bus"></i>
+            <div class="message">Shuttle Has Arrived</div>
+            <div class="time-stamp">10:00</div>
+        </div>
+        <div class="notification">
+            <i class="fa-solid fa-clipboard"></i>
+            <div class="message">Registration is beginning</div>
+            <div class="time-stamp">10:00</div>
+        </div>
+        <div class="notification">
+            <i class="fa-solid fa-book"></i>
+            <div class="message">Exams is starting in 15 mins</div>
+            <div class="time-stamp">10:00</div>
+        </div>
+        <button class="button">
+            <h3><i class="fa-solid fa-sort"></i>Sort by</h3>
+        </button>
+    </div>
+    <div class="navigation">
+        <button class="button">
+            <h3><i class="fa-solid fa-gear"></i>Settings</h3>
+        </button>
+    </div>
+</div>
 </body>
+
 </html>
