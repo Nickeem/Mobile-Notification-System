@@ -77,4 +77,28 @@ button {
 .tab-content.active {
     display: block;
 }
+/* Add to style.css */
+.tab-content {
+    font-size: 2em;
+}
+
+.setting-item > i {
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.setting-item > select {
+    font-size: 1em; /* Reset the font size of the dropdown to its original value */
+    margin-left: 20px;
+}
+
+.setting-item > input[type="checkbox"] {
+    width: 4.5em;
+    height: 4.5em;
+    margin-left: 20px;
+}
+
+.setting-item {
+    margin-bottom: 20px;
+}
 
