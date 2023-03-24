@@ -19,132 +19,135 @@
 
             tab = document.getElementsByClassName("tab");
             for (i = 0; i < tab.length; i++) {
-                tab[i].className = tab[i].className.replace(" active", "");
+                tab[i].classList.remove("active-tab");
             }
 
             document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
+            evt.currentTarget.classList.add("active-tab");
         }
     </script>
 </head>
 
 <body>
-<div class="interface">
-    <div class="header">
-        <div class="header-name">
-            <h1><i class="fa-solid fa-cog"></i> Settings</h1>
+    <div class="interface">
+        <div class="header">
+            <div class="header-name">
+                <h1><i class="fa-solid fa-cog"></i> Settings</h1>
+            </div>
+        </div>
+        <div class="content">
+            <div class="tabs">
+                <div class="tab active-tab" onclick="openTab(event, 'Tab1')">Emergency</div>
+                <div class="tab" onclick="openTab(event, 'Tab2')">Shuttle</div>
+                <div class="tab" onclick="openTab(event, 'Tab3')">Exams</div>
+                <div class="tab" onclick="openTab(event, 'Tab4')">Registration</div>
+            </div>
+            <!-- Update Tab1 content in settings.html -->
+            <div id="Tab1" class="tab-content active">
+                <div class="setting-item">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Emergency Configuration
+                </div>
+                <div class="setting-item">
+                    Ringtone <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
+                </div>
+            </div>
+
+            <!-- Update Tab2 content in settings.html -->
+            <div id="Tab2" class="tab-content">
+                <div class="setting-item">
+                    <i class="fa-solid fa-bus"></i> Shuttle Configuration
+                </div>
+                <div class="setting-item">
+                    Ringtone
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
+                </div>
+            </div>
+
+            <!-- Update Tab3 content in settings.html -->
+            <div id="Tab3" class="tab-content">
+                <div class="setting-item">
+                    <i class="fa-solid fa-book"></i> Exam Configuration
+                </div>
+                <div class="setting-item">
+                    Ringtone
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
+                </div>
+            </div>
+
+            <!-- Update Tab4 content in settings.html -->
+            <div id="Tab4" class="tab-content">
+                <div class="setting-item">
+                    <i class="fa-solid fa-clipboard"></i> Registration Configuration
+                </div>
+                <div class="setting-item">
+                    Ringtone
+                    <select>
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
+                </div>
+                <div class="setting-item">
+                    Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
+                </div>
+            </div>
+
+        </div>
+        <div class="navigation">
+            <button class="button">
+                <h3><i class="fa-solid fa-house"></i>Home</h3>
+            </button>
         </div>
     </div>
-    <div class="content">
-        <div class="tabs">
-            <div class="tab" onclick="openTab(event, 'Tab1')">Emergency</div>
-            <div class="tab" onclick="openTab(event, 'Tab2')">Shuttle</div>
-            <div class="tab" onclick="openTab(event, 'Tab3')">Exams</div>
-            <div class="tab" onclick="openTab(event, 'Tab4')">Registration</div>
-        </div>
-        <!-- Update Tab1 content in settings.html -->
-        <div id="Tab1" class="tab-content active">
-            <div class="setting-item">
-                <i class="fa-solid fa-triangle-exclamation"></i> Emergency Configuration
-            </div>
-            <div class="setting-item">
-                Ringtone <select>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-            </select>
-            </div>
-            <div class="setting-item">
-                Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
-            </div>
-        </div>
-
-        <!-- Update Tab2 content in settings.html -->
-        <div id="Tab2" class="tab-content">
-            <div class="setting-item">
-                <i class="fa-solid fa-bus"></i> Shuttle Configuration
-            </div>
-            <div class="setting-item">
-                Ringtone <select>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-            </select>
-            </div>
-            <div class="setting-item">
-                Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
-            </div>
-        </div>
-
-        <!-- Update Tab3 content in settings.html -->
-        <div id="Tab3" class="tab-content">
-            <div class="setting-item">
-                <i class="fa-solid fa-book"></i> Exam Configuration
-            </div>
-            <div class="setting-item">
-                Ringtone <select>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-            </select>
-            </div>
-            <div class="setting-item">
-                Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
-            </div>
-        </div>
-
-        <!-- Update Tab4 content in settings.html -->
-        <div id="Tab4" class="tab-content">
-            <div class="setting-item">
-                <i class="fa-solid fa-clipboard"></i> Registration Configuration
-            </div>
-            <div class="setting-item">
-                Ringtone <select>
-                <option>Option 1</option>
-                <option>Option 2</option>
-                <option>Option 3</option>
-                <option>Option 4</option>
-            </select>
-            </div>
-            <div class="setting-item">
-                Sound <i class="fa-solid fa-music"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Vibrate <i class="fa-solid fa-mobile"></i> <input type="checkbox">
-            </div>
-            <div class="setting-item">
-                Flash <i class="fa-solid fa-lightbulb"></i> <input type="checkbox">
-            </div>
-        </div>
-
-    </div>
-    <div class="navigation">
-        <button class="button">
-            <h3><i class="fa-solid fa-house"></i>Home</h3>
-        </button>
-    </div>
-</div>
 </body>
 
 </html>

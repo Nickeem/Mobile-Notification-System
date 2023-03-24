@@ -9,6 +9,9 @@
     max-width: 500px;
     margin: auto;
 }
+.tab {
+    border: 1px solid black;
+}
 
 
 .notification {
@@ -62,12 +65,22 @@ button {
 /* Add this to style.css */
 .tabs {
     display: flex;
+    flex-grow: 1;
+    width: 100%;
     justify-content: space-around;
     margin-bottom: 20px;
 }
 
 .tab {
     cursor: pointer;
+    flex-grow: 1;
+    text-align: center;
+    padding: 3px;
+}
+
+.active-tab {
+    background-color: #4472c4;
+    color: white; 
 }
 
 .tab-content {
